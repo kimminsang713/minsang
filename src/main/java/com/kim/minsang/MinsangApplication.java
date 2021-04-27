@@ -9,6 +9,7 @@ public class MinsangApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(MinsangApplication.class, args);
+        System.out.println("hello");
     }
 
 }

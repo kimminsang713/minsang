@@ -1,2 +1,7 @@
-package com.kim.minsang.modal;public class User {
+package com.kim.minsang.modal;
+
+
+
+
+public class User {
 }
