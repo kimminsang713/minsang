@@ -18,17 +18,17 @@ public class Calculator {
 //            7. ",,,1,2" => 3
 //            8. "" =>
     public static void caluclator(){
-        // 값을 받을 변수 선언
+        // 값을 받을 리스트 선언
         String num = "";
-
+        String str = "";
         Scanner scan = new Scanner(System.in);
-//       // 포문으로 값을 받아 저장하기
-//        for(int i=0; i<=2; i++){
-//            System.out.print("숫자 입력 :");
-//            num = scan.nextLine();
-//        }
-        System.out.print(num);
-
+       // 포문으로 값을 사용자한테 받아 저장하기
+        for(int i=0; i<=2; i++){
+            System.out.print("숫자 입력 : ");
+            num = scan.nextLine();
+            str += num+",";
+        }
+        System.out.print(str);
 
         // 더하기
 
