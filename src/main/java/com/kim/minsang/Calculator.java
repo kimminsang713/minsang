@@ -18,9 +18,12 @@ public class Calculator {
 //            7. ",,,1,2" => 3
 //            8. "" =>
     public static void caluclator(){
-        // 값을 받을 리스트 선언
+        // 값을 받을 변수
         String num = "";
         String str = "";
+        int i = 0;
+        int result = 0;
+
         Scanner scan = new Scanner(System.in);
 
         // 사용자가 몇번 입력할지 정함
@@ -28,28 +31,31 @@ public class Calculator {
         int size = scan.nextInt();
         scan.nextLine();
 
-        int i = 0;
+
         // 반복문으로
         while(i<size){ // 3번돌면 반복문 빠져나가게
             System.out.print("숫자 입력 : ");
             num = scan.nextLine();
-            if(Integer.valueOf(num) < 0){ // 입력받은 값이 음수인지 체크
-                System.out.print("음수는 입력할 수 없습니다. 다시 입력해주세요 ");
-                i--;
-            }
-            str += num+",";
-            i++;
-        }
 
+//            if(Integer.valueOf(num) < 0 ){ // 입력받은 값이 음수인지 체크
+//                System.out.print("음수는 입력할 수 없습니다. 다시 입력해주세요 ");
+//                i--;
+//            }else{
+//
+//            }
+            i++;
+            str += num+",";
+        }
         // split을 통해 ,로 구분지어 배열에 담기
         String arr[] = str.split(",");
-        int result = 0;
+
 //        배열에서 포문으로 값을 빼온뒤 더하기
         for(int j=0; j<arr.length; j++){
              result+=Integer.valueOf(arr[j]);
+             System.out.print(arr[j] + ",");
         }
         //결과
-        System.out.println(arr + "," + "=>" + result);
+        System.out.print("=>" + result);
 
 
     }
